@@ -1,0 +1,35 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Ingrese su estatura y su peso");
+            int peso = int.Parse(Console.ReadLine());
+            double estatura = double.Parse(Console.ReadLine());
+
+            double IMC = (peso / Math.Pow(estatura, 2));
+            Console.WriteLine("su IMC es:" + IMC);
+            if (IMC < 18.5)
+            {
+                Console.WriteLine("Su indice esta por debajo de lo normal");
+            }
+            if (18.5 <= IMC && IMC <= 24.9)
+            {
+                Console.WriteLine("Su indicie es normal");
+            }
+            if (IMC > 24.9)
+            {
+                Console.WriteLine("Su indice esta por arriba de lo normal");
+            }
+            
+
+        }
+    }
+}
